@@ -374,9 +374,9 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
             case GOVERNANCE:
                 allowThroughFilter = allowThroughFilter && token.group == TokenGroup.GOVERNANCE;
                 break;
-            case COLLECTIBLES:
+            /*case COLLECTIBLES:
                 allowThroughFilter = allowThroughFilter && token.isNFT();
-                break;
+                break;*/
             case ATTESTATIONS:
                 //TODO
                 break;
@@ -457,7 +457,7 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
     public void setFilterType(TokenFilter filterType)
     {
         this.filterType = filterType;
-        gridFlag = filterType == TokenFilter.COLLECTIBLES;
+        gridFlag = false;//filterType == TokenFilter.COLLECTIBLES;
         filterAdapterItems();
     }
 
