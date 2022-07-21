@@ -41,10 +41,10 @@ public class BaseNavigationActivity extends BaseActivity implements AWalletBotto
         nav.removeSettingsBadgeKey(key);
     }
 
-    public void removeDappBrowser()
+   /* public void removeDappBrowser()
     {
         nav.hideBrowserTab();
-    }
+    }*/
 
     public void hideNavBar() { nav.setVisibility(View.GONE); }
 

@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class AWalletBottomNavigationView extends LinearLayout
 {
-    private final TextView dappBrowserLabel;
+    //private final TextView dappBrowserLabel;
     private final TextView walletLabel;
     private final TextView settingsBadge;
     private final TextView settingsLabel;
@@ -41,14 +41,14 @@ public class AWalletBottomNavigationView extends LinearLayout
         inflate(context, R.layout.layout_bottom_navigation, this);
         walletLabel = findViewById(R.id.nav_wallet_text);
         activityLabel = findViewById(R.id.nav_activity_text);
-        dappBrowserLabel = findViewById(R.id.nav_browser_text);
+       // dappBrowserLabel = findViewById(R.id.nav_browser_text);
         settingsTab = findViewById(R.id.settings_tab);
         settingsLabel = findViewById(R.id.nav_settings_text);
         settingsBadge = findViewById(R.id.settings_badge);
 
         walletLabel.setOnClickListener(v -> selectItem(WALLET));
         activityLabel.setOnClickListener(v -> selectItem(ACTIVITY));
-        dappBrowserLabel.setOnClickListener(v -> selectItem(DAPP_BROWSER));
+        //dappBrowserLabel.setOnClickListener(v -> selectItem(DAPP_BROWSER));
         settingsTab.setOnClickListener(v -> selectItem(SETTINGS));
 
         regularTypeface = ResourcesCompat.getFont(getContext(), R.font.font_regular);
@@ -79,10 +79,10 @@ public class AWalletBottomNavigationView extends LinearLayout
         selectedItem = index;
         switch (index)
         {
-            case DAPP_BROWSER:
+            /*case DAPP_BROWSER:
                 dappBrowserLabel.setSelected(true);
                 dappBrowserLabel.setTypeface(semiboldTypeface);
-                break;
+                break;*/
             case WALLET:
                 walletLabel.setSelected(true);
                 walletLabel.setTypeface(semiboldTypeface);
@@ -100,8 +100,8 @@ public class AWalletBottomNavigationView extends LinearLayout
 
     private void deselectAll()
     {
-        dappBrowserLabel.setSelected(false);
-        dappBrowserLabel.setTypeface(regularTypeface);
+        //dappBrowserLabel.setSelected(false);
+       // dappBrowserLabel.setTypeface(regularTypeface);
         walletLabel.setSelected(false);
         walletLabel.setTypeface(regularTypeface);
         settingsLabel.setSelected(false);
@@ -151,11 +151,11 @@ public class AWalletBottomNavigationView extends LinearLayout
         settingsBadge.setText(String.valueOf(settingsBadgeKeys.size()));
     }
 
-    public void hideBrowserTab()
+  /*  public void hideBrowserTab()
     {
         if (dappBrowserLabel != null) dappBrowserLabel.setVisibility(View.GONE);
     }
-
+*/
     public interface OnBottomNavigationItemSelectedListener
     {
         boolean onBottomNavigationItemSelected(WalletPage index);

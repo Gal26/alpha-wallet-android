@@ -107,7 +107,7 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
     private HomeReceiver homeReceiver;
     private String buildVersion;
     private Fragment settingsFragment;
-    private Fragment dappBrowserFragment;
+    //private Fragment dappBrowserFragment;
     private Fragment walletFragment;
     private Fragment activityFragment;
     private String walletTitle;
@@ -245,11 +245,11 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
         viewModel.backUpMessage().observe(this, this::onBackup);
         viewModel.splashReset().observe(this, this::onRequireInit);
 
-        if (CustomViewSettings.hideDappBrowser())
+        /*if (CustomViewSettings.hideDappBrowser())
         {
             removeDappBrowser();
         }
-
+        */
         KeyboardVisibilityEvent.setEventListener(
                 this, isOpen ->
                 {
@@ -844,10 +844,10 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
                 case ACTIVITY:
                     activityFragment = new ActivityFragment();
                     return activityFragment;
-                case DAPP_BROWSER:
+                /*case DAPP_BROWSER:
                     if (CustomViewSettings.hideDappBrowser()) dappBrowserFragment = new Fragment();
                     else dappBrowserFragment = new DappBrowserFragment();
-                    return dappBrowserFragment;
+                    return dappBrowserFragment;*/
                 case SETTINGS:
                     settingsFragment = new NewSettingsFragment();
                     return settingsFragment;
@@ -874,8 +874,8 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
                     return (BaseFragment) walletFragment;
                 case ACTIVITY:
                     return (BaseFragment) activityFragment;
-                case DAPP_BROWSER:
-                    return (BaseFragment) dappBrowserFragment;
+                /*case DAPP_BROWSER:
+                    return (BaseFragment) dappBrowserFragment;*/
                 case SETTINGS:
                     return (BaseFragment) settingsFragment;
             }
