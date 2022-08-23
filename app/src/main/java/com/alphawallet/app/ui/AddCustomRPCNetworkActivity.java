@@ -6,6 +6,7 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.view.inputmethod.EditorInfo;
 import android.webkit.URLUtil;
+import android.widget.Toast;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -221,6 +222,7 @@ public class AddCustomRPCNetworkActivity extends BaseActivity implements Standar
 
         if (validateInputs())
         {
+            //This is adding new network to network list
             viewModel.saveNetwork(nameInputView.getText().toString(),
                     rpcUrlInputView.getText().toString(),
                     Long.parseLong(chainIdInputView.getText().toString()),

@@ -16,7 +16,7 @@
         <!-- The variation of the primary branding color -->
         <item name="colorPrimaryVariant">@color/brand</item>
         <!-- The color applied to the status bar -->
-        <item name="colorPrimaryDark">@color/surface</item>
+        <item name="colorPrimaryDark">@color/primary_app_color</item>
         <!-- The color applied on top of brand color -->
         <item name="colorOnPrimary">@color/brand_inverse</item>
         <!-- The complementary branding color often used for controls -->
@@ -117,7 +117,7 @@
 
     <style name="AppTheme.BottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
         <item name="android:windowIsFloating">false</item>
-        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:statusBarColor">@color/primary_app_color</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="bottomSheetStyle">@style/Aw.Component.BottomSheet</item>
         <item name="colorSurface">@color/background_floating</item>

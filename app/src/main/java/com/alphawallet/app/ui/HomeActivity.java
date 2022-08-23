@@ -207,7 +207,6 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
         viewModel.setCurrencyAndLocale(this);
         viewModel.tryToShowWhatsNewDialog(this);
         setContentView(R.layout.activity_home);
-
         initViews();
         toolbar();
 

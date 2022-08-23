@@ -107,7 +107,7 @@
     <string name="error_create_wallet">Failed to create a wallet</string>
 
     <string name="app_name">AlphaWallet</string>
-    <string name="all">כל המטבעות</string>
+    <string name="all">המטבעות שלי</string>
     <string name="currency">Currencies</string>
     <string name="advanced">Advanced Options</string>
     <string name="copy_wallet_address">Copy Wallet Address</string>
@@ -236,6 +236,8 @@
     <string name="dialog_process_error">Trade not processed</string>
     <string name="dialog_ok">OK</string>
     <string name="wallet_label">ארנק</string>
+    <string name="market_label">מרקט</string>
+    <string name="news_label">חדשות</string>
     <string name="tx_label">Transactions</string>
     <string name="browser_label">Browser</string>
     <string name="settings_label">הגדרות</string>
@@ -874,7 +876,7 @@
     <string name="summary_change_24h">%1$s (%2$s) Today</string>
     <string name="performance">Performance</string>
     <string name="token_name_hint">Search token</string>
-    <string name="assets">המטבעות שלי</string>
+    <string name="assets">כל המטבעות</string>
     <string name="defi_header">DeFi</string>
     <string name="governance_header">Governance</string>
     <string name="collectibles_header">Collectibles</string>

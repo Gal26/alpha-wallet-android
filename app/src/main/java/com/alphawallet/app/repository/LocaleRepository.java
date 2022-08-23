@@ -18,7 +18,8 @@ public class LocaleRepository implements LocaleRepositoryType {
             "es",
             "fr",
             "vi",
-            "my"
+            "my",
+            "he"
     };
 
     private final PreferenceRepositoryType preferences;

@@ -24,34 +24,55 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/wallet_label"
-            android:textColor="@color/selector_bottom_navigation"
-            app:drawableTint="@color/selector_bottom_navigation"
-            app:drawableTopCompat="@drawable/ic_tab_wallet" />
+            android:textColor="@color/primary_app_color"
+            app:drawableTopCompat="@drawable/ic_tab_wallet_2" />
 
         <TextView
-            android:id="@+id/nav_activity_text"
+            android:id="@+id/nav_market_text"
             style="@style/Aw.Typography.Small"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/activity_label"
-            android:textColor="@color/selector_bottom_navigation"
-            app:drawableTint="@color/selector_bottom_navigation"
-            app:drawableTopCompat="@drawable/ic_tab_activity" />
+            android:text="@string/market_label"
+            android:textColor="@color/primary_app_color"
+            app:drawableTopCompat="@drawable/ic_tab_market" />
 
-        <!--  <TextView
-              android:id="@+id/nav_browser_text"
+        <TextView
+            android:id="@+id/nav_news_text"
+            style="@style/Aw.Typography.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/news_label"
+            android:textColor="@color/primary_app_color"
+            app:drawableTopCompat="@drawable/ic_tab_news" />
+
+        <!--   <TextView
+              android:id="@+id/nav_activity_text"
               style="@style/Aw.Typography.Small"
               android:layout_width="0dp"
               android:layout_height="wrap_content"
               android:layout_weight="1"
               android:gravity="center"
-              android:text="@string/browser_label"
+              android:text="@string/activity_label"
               android:textColor="@color/selector_bottom_navigation"
               app:drawableTint="@color/selector_bottom_navigation"
-              app:drawableTopCompat="@drawable/ic_tab_browser" />
--->
+              app:drawableTopCompat="@drawable/ic_tab_activity" />
+  -->
+          <!--  <TextView
+                android:id="@+id/nav_browser_text"
+                style="@style/Aw.Typography.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/browser_label"
+                android:textColor="@color/selector_bottom_navigation"
+                app:drawableTint="@color/selector_bottom_navigation"
+                app:drawableTopCompat="@drawable/ic_tab_browser" />
+  -->
 
           <RelativeLayout
               android:id="@+id/settings_tab"
@@ -70,9 +91,8 @@
                   android:layout_centerHorizontal="true"
                   android:gravity="center"
                   android:text="@string/settings_label"
-                  android:textColor="@color/selector_bottom_navigation"
-                  app:drawableTint="@color/selector_bottom_navigation"
-                  app:drawableTopCompat="@drawable/ic_tab_settings" />
+                  android:textColor="@color/primary_app_color"
+                  app:drawableTopCompat="@drawable/ic_tab_settings_2" />
 
               <TextView
                   android:id="@+id/settings_badge"

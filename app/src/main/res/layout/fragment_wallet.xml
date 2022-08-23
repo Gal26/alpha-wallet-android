@@ -9,7 +9,8 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/primary_app_color">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -33,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
+            android:background="@color/regular_white"
             app:layout_scrollFlags="enterAlways" />
 
         <View style="@style/Aw.Component.Separator" />
@@ -63,7 +65,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        tools:visibility="gone" />
+        tools:visibility="gone"
+         />
 
     <com.alphawallet.app.widget.SystemView
         android:id="@+id/system_view"
