@@ -10,6 +10,7 @@ public class CurrencyRepository implements CurrencyRepositoryType {
     public static final CurrencyItem[] CURRENCIES = {
             new CurrencyItem("USD", "American Dollar", "$", R.drawable.ic_flags_usa),
             new CurrencyItem("EUR", "Euro", "€", R.drawable.ic_flags_euro),
+            new CurrencyItem("ILS", "Israeli Shekel", "₪", R.drawable.ic_flags_israel),
             new CurrencyItem("GBP", "British Pound", "£", R.drawable.ic_flags_uk),
             new CurrencyItem("AUD", "Australian Dollar", "$", R.drawable.ic_flags_australia),
             new CurrencyItem("CNY", "China Yuan Renminbi","¥", R.drawable.ic_flags_china),
