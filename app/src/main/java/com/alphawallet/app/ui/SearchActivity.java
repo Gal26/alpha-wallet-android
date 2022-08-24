@@ -50,7 +50,7 @@ public class SearchActivity extends BaseActivity implements SearchToolbarCallbac
         recyclerView = findViewById(R.id.list);
         progressBar = findViewById(R.id.progress_bar);
         SearchToolbar searchBar = findViewById(R.id.search);
-        searchBar.setSearchCallback(this);
+       searchBar.setSearchCallback(this);
         searchBar.getEditView().requestFocus();
     }
 

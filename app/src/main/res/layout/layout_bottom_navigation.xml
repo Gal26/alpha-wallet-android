@@ -49,6 +49,7 @@
             android:textColor="@color/primary_app_color"
             app:drawableTopCompat="@drawable/ic_tab_news" />
 
+
         <!--   <TextView
               android:id="@+id/nav_activity_text"
               style="@style/Aw.Typography.Small"
@@ -83,6 +84,7 @@
               android:gravity="center"
               android:orientation="vertical">
 
+
               <TextView
                   android:id="@+id/nav_settings_text"
                   style="@style/Aw.Typography.Small"
@@ -105,7 +107,6 @@
                   android:visibility="gone"
                   tools:text="1"
                   tools:visibility="visible" />
-
           </RelativeLayout>
 
       </LinearLayout>
