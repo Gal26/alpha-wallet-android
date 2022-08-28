@@ -7,6 +7,16 @@
     android:orientation="vertical"
     android:padding="@dimen/standard_16">
 
+
+    <TextView
+        android:id="@+id/balanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:textColor="@color/regular_white"
+        android:text="@string/balance_label" />
+
     <TextView
         android:id="@+id/title"
         style="@style/Aw.Typography.Title.XLarge"
@@ -19,17 +29,5 @@
         android:text="@string/unknown_balance_without_symbol"
         app:autoSizeTextType="uniform"
         tools:text="$100,000,000,000,000.00" />
-
-    <TextView
-        android:id="@+id/subtitle"
-        style="@style/Aw.Typography.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:lines="1"
-        android:text="@string/unknown_balance_without_symbol"
-        app:autoSizeTextType="uniform"
-        tools:text="+100.00 Today (+100%)" />
 
 </LinearLayout>

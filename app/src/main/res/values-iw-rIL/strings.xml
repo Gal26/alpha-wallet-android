@@ -238,6 +238,7 @@
     <string name="wallet_label">ארנק</string>
     <string name="market_label">מרקט</string>
     <string name="news_label">חדשות</string>
+    <string name="balance_label">היתרה שלך</string>
     <string name="tx_label">Transactions</string>
     <string name="browser_label">Browser</string>
     <string name="settings_label">הגדרות</string>

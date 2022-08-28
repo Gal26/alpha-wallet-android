@@ -35,7 +35,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="top"
             android:background="@drawable/shape_tab_layout_wallet"
-            app:layout_scrollFlags="enterAlways" />
+            app:layout_scrollFlags="enterAlways"
+            />
 
         <View style="@style/Aw.Component.Separator" />
 

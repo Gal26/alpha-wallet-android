@@ -238,6 +238,7 @@
     <string name="wallet_label">Wallet</string>
     <string name="market_label">Market</string>
     <string name="news_label">News</string>
+    <string name="balance_label">Balance</string>
     <string name="tx_label">Transactions</string>
     <string name="browser_label">Browser</string>
     <string name="settings_label">Settings</string>
