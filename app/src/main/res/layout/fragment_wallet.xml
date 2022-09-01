@@ -36,6 +36,9 @@
             android:layout_gravity="top"
             android:background="@drawable/shape_tab_layout_wallet"
             app:layout_scrollFlags="enterAlways"
+            app:tabMaxWidth="0dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
             />
 
         <View style="@style/Aw.Component.Separator" />
