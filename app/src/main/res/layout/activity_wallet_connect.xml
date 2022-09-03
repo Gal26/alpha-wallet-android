@@ -28,7 +28,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/optimal_30"
                 android:layout_marginBottom="@dimen/small_12"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@mipmap/ic_alpha" />
 
             <TextView
                 android:id="@+id/peer_name"

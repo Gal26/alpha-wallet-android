@@ -24,8 +24,9 @@
     <string name="action_buy">Buy %s</string>
     <string name="empty" />
     <string name="try_again">Try again</string>
+    <string name="splash_title">ברוכים הבאים לקאלי</string>
     <string name="already_have_account">Already have a wallet?</string>
-    <string name="action_create_new_account">Create a New Wallet</string>
+    <string name="action_create_new_account">צור ארנק חדש</string>
     <string name="unknown_error">An error has occurred.</string>
     <string name="no_tokens">No tokens found.</string>
 
@@ -514,7 +515,7 @@
     <string name="password_6_characters_or_more">Password 6 characters or more</string>
     <string name="create_a_new_wallet">Create a new Wallet</string>
     <string name="watch">Watch</string>
-    <string name="already_have_a_wallet">I already have a wallet:</string>
+    <string name="already_have_a_wallet">ייבא ארנק</string>
     <string name="watch_wallet">Watch-only Wallets</string>
     <string name="suggestion_address">Enter Ethereum Address</string>
     <string name="ethereum_address_hint">Ethereum Address: 0x then 40 characters of 0–9 a-f A-F</string>
