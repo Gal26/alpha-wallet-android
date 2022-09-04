@@ -141,6 +141,7 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
         BinderViewHolder<?> holder;
         switch (viewType)
         {
+
             case TokenHolder.VIEW_TYPE:
                 TokenHolder tokenHolder = new TokenHolder(parent, assetService, tokensService);
                 tokenHolder.setOnTokenClickListener(tokensAdapterCallback);
@@ -153,12 +154,12 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
                 holder = tokenGridHolder;
                 break;
 
-           case ManageTokensHolder.VIEW_TYPE:
+         /*  case ManageTokensHolder.VIEW_TYPE:
                 ManageTokensHolder manageTokensHolder = new ManageTokensHolder(R.layout.layout_manage_tokens_with_buy, parent);
                 manageTokensHolder.setOnTokenClickListener(tokensAdapterCallback);
                 holder = manageTokensHolder;
                 break;
-
+*/
             case HeaderHolder.VIEW_TYPE:
                 holder = new HeaderHolder(R.layout.layout_tokens_header, parent);
                 break;
@@ -239,12 +240,15 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
         items.add(new ChainItem(tcm.getChain(), tcm.group));
     }
 
-    private void addManageTokensLayout() {
+   /* private void addManageTokensLayout() {
         if (walletAddress != null && !walletAddress.isEmpty() && tokensService.isMainNetActive()
             && (filterType == TokenFilter.ALL || filterType == TokenFilter.ASSETS)) { //only show buy button if filtering all or assets
             items.add(new ManageTokensSortedItem(new ManageTokensData(walletAddress, managementLauncher)));
+
         }
     }
+
+    */
 
     public void addWarning(WarningData data)
     {
@@ -403,14 +407,14 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
 
         addSearchTokensLayout();
 
-        if (managementLauncher != null) addManageTokensLayout();
+      //  if (managementLauncher != null) addManageTokensLayout();
 
         for (TokenCardMeta token : tokens)
         {
             updateToken(token, false);
         }
 
-        addManageTokensLayout();
+       // addManageTokensLayout();
 
         items.endBatchedUpdates();
     }

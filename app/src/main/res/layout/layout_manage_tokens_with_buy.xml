@@ -15,12 +15,4 @@
         android:text="@string/buy_eth"
          />
 
-    <ImageView
-        android:id="@+id/img_add_token"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|center_vertical"
-        android:src="@drawable/ic_plus"
-        android:visibility="gone" />
-
 </LinearLayout>
