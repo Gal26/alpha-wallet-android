@@ -160,7 +160,6 @@ public class WalletFragment extends BaseFragment implements
                                 .commitAllowingStateLoss();
                     }
                 });
-
         return view;
     }
 
