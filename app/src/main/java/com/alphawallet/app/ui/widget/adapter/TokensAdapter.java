@@ -164,10 +164,10 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
                 holder = new HeaderHolder(R.layout.layout_tokens_header, parent);
                 break;
 
-            case SearchTokensHolder.VIEW_TYPE:
+         /*   case SearchTokensHolder.VIEW_TYPE:
                holder = new SearchTokensHolder(R.layout.layout_manage_token_search, parent, tokensAdapterCallback::onSearchClicked);
                 break;
-
+*/
             case WarningHolder.VIEW_TYPE:
                 holder = new WarningHolder(R.layout.item_warning, parent);
                 break;
@@ -227,19 +227,21 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
         this.walletAddress = walletAddress;
     }
 
-    private void addSearchTokensLayout() {
+    /*private void addSearchTokensLayout() {
         if (walletAddress != null && !walletAddress.isEmpty()) {
             items.add(new ManageTokensSearchItem(new ManageTokensData(walletAddress, managementLauncher), 0));
         }
     }
+    */
+
 
     //Only show the header if the item type is added to the list
-    private void addHeaderLayout(TokenCardMeta tcm)
+ /*   private void addHeaderLayout(TokenCardMeta tcm)
     {
         items.add(new HeaderItem(tcm.group));
         items.add(new ChainItem(tcm.getChain(), tcm.group));
     }
-
+*/
    /* private void addManageTokensLayout() {
         if (walletAddress != null && !walletAddress.isEmpty() && tokensService.isMainNetActive()
             && (filterType == TokenFilter.ALL || filterType == TokenFilter.ASSETS)) { //only show buy button if filtering all or assets
@@ -296,7 +298,7 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
                 tsi.setFiatValue(tokensService.getTokenFiatValue(token.getChain(), token.getAddress()));
                 if (debugView) tsi.debug();
                 position = items.add(tsi);
-                addHeaderLayout(token);
+               // addHeaderLayout(token);
             }
 
             if (notify) notifyItemChanged(position);
@@ -405,7 +407,7 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
             items.clear();
         }
 
-        addSearchTokensLayout();
+        //addSearchTokensLayout();
 
       //  if (managementLauncher != null) addManageTokensLayout();
 
