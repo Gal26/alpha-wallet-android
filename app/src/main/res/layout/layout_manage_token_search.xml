@@ -14,7 +14,8 @@
         android:layout_marginBottom="@dimen/tiny_8"
         android:background="@drawable/background_round_search"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="@dimen/base_24"

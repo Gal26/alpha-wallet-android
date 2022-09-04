@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/standard_16"
-        android:text="@string/buy_eth" />
+        android:text="@string/buy_eth"
+         />
 
     <ImageView
         android:id="@+id/img_add_token"
