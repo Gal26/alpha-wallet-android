@@ -26,7 +26,21 @@
             android:id="@+id/large_title_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|snap" />
+            app:layout_scrollFlags="scroll|snap"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/main_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            style="@style/Aw.Component.TabLayout.Scrollable"
+            app:tabTextColor="@color/white"
+            android:layout_marginBottom="20dp"
+            />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"

@@ -872,6 +872,10 @@
     <string name="action_view">View</string>
     <string name="error_chainid_already_taken">Chain Id already taken</string>
     <string name="status">Status</string>
+    <string name="send_label_tab">שליחה</string>
+    <string name="buy_label_tab">קנייה</string>
+    <string name="swap_label_tab">המרה</string>
+    <string name="withdraw_label_tab">משיכה</string>
     <string name="connected_to">Connected to</string>
     <string name="not_connected">Not Connected</string>
     <string name="online">Online</string>

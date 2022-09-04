@@ -138,6 +138,8 @@ public class WalletFragment extends BaseFragment implements
 
         initList();
 
+        initMainTabLayout(view);
+
         initTabLayout(view);
 
         initNotificationView(view);
@@ -880,4 +882,88 @@ public class WalletFragment extends BaseFragment implements
         Intent intent = new Intent(getActivity(), SearchActivity.class);
         startActivity(intent);
     }
+    private void initMainTabLayout(View view)
+    {
+        TabLayout mainTabLayout = view.findViewById(R.id.main_tab_layout);
+        if (CustomViewSettings.hideTabBar())
+        {
+            mainTabLayout.setVisibility(View.GONE);
+            return;
+        }
+        mainTabLayout.addTab(mainTabLayout.newTab());
+        mainTabLayout.addTab(mainTabLayout.newTab());
+        mainTabLayout.addTab(mainTabLayout.newTab());
+        mainTabLayout.addTab(mainTabLayout.newTab());
+        setupMainTabIcons(mainTabLayout);
+
+        mainTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
+        {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab)
+            {
+                TokenFilter newFilter = setLinearLayoutManager(tab.getPosition());
+                adapter.setFilterType(newFilter);
+                switch (newFilter)
+                {
+                    case ALL:
+                    case ASSETS:
+                    case DEFI:
+                    case GOVERNANCE:
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                        viewModel.prepare();
+                        break;
+                    /*case COLLECTIBLES:
+                        setGridLayoutManager(TokenFilter.COLLECTIBLES);
+                        viewModel.prepare();
+                        break;*/
+                    case ATTESTATIONS: // TODO: Filter Attestations
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab)
+            {
+            }
+
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab)
+            {
+            }
+        });
+
+
+    }
+
+    public void setupMainTabIcons(TabLayout mainTabLayout) {
+    /*    mainTabLayout.getTabAt(0).setIcon(R.drawable.ic_tab_send);
+        mainTabLayout.getTabAt(1).setIcon(R.drawable.ic_tab_buy);
+        mainTabLayout.getTabAt(2).setIcon(R.drawable.ic_tab_swap);
+        mainTabLayout.getTabAt(3).setIcon(R.drawable.ic_tab_withdraw);
+    */
+        for (int i = 0; i < mainTabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = mainTabLayout.getTabAt(i);
+            switch(i){
+                case 0: if (tab != null){
+                    tab.setIcon(R.drawable.ic_tab_send).setText(R.string.send_label_tab);
+                            ;
+                }break;
+                case 1: if (tab != null){
+                    tab.setIcon(R.drawable.ic_tab_buy).setText(R.string.buy_label_tab);
+                            ;
+                }break;
+                case 2: if (tab != null){
+                    tab.setIcon(R.drawable.ic_tab_swap).setText(R.string.swap_label_tab)
+                            ;
+                }break;
+                case 3: if (tab != null){
+                    tab.setIcon(R.drawable.ic_tab_withdraw);
+                            ;
+                }break;
+            }
+            if (tab != null) tab.setCustomView(R.layout.main_tab_custom_view);
+        }
+    }
+
 }
