@@ -43,13 +43,13 @@
     </style>
 
     <style name="Aw.Component.TabLayout" parent="Widget.Design.TabLayout">
-        <item name="tabIndicatorColor">?colorAccent</item>
+        <item name="tabIndicatorColor">@color/primary_app_color</item>
         <item name="tabIndicatorHeight">3dp</item>
         <item name="tabPaddingStart">25dp</item>
         <item name="tabPaddingEnd">25dp</item>
         <item name="tabTextAppearance">@style/Aw.Typography.Tab</item>
-        <item name="tabSelectedTextColor">?colorAccent</item>
-        <item name="tabTextColor">?android:textColorSecondary</item>
+        <item name="tabSelectedTextColor">@color/primary_app_color</item>
+        <item name="tabTextColor">@color/gray_tab</item>
         <item name="tabIndicator">@drawable/tab_indicator</item>
         <item name="tabIndicatorFullWidth">true</item>
     </style>

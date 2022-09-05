@@ -36,10 +36,11 @@
             android:layout_height="match_parent"
             android:background="@color/transparent"
             app:tabMode="fixed"
-            app:tabGravity="fill"
-            style="@style/Aw.Component.TabLayout.Scrollable"
+            style="@style/Aw.Component.TabLayout"
             app:tabTextColor="@color/white"
-            android:layout_marginBottom="20dp"
+            app:tabGravity="fill"
+            android:layout_marginBottom="18dp"
+             app:tabInlineLabel="true"
             />
 
         <com.google.android.material.tabs.TabLayout

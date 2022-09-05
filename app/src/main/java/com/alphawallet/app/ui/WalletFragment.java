@@ -20,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -890,10 +891,10 @@ public class WalletFragment extends BaseFragment implements
             mainTabLayout.setVisibility(View.GONE);
             return;
         }
-        mainTabLayout.addTab(mainTabLayout.newTab());
-        mainTabLayout.addTab(mainTabLayout.newTab());
-        mainTabLayout.addTab(mainTabLayout.newTab());
-        mainTabLayout.addTab(mainTabLayout.newTab());
+        mainTabLayout.addTab(mainTabLayout.newTab().setText(R.string.send_label_tab));
+        mainTabLayout.addTab(mainTabLayout.newTab().setText(R.string.buy_label_tab));
+        mainTabLayout.addTab(mainTabLayout.newTab().setText(R.string.swap_label_tab));
+        mainTabLayout.addTab(mainTabLayout.newTab().setText(R.string.withdraw_label_tab));
         setupMainTabIcons(mainTabLayout);
 
         mainTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
@@ -937,25 +938,23 @@ public class WalletFragment extends BaseFragment implements
     }
 
     public void setupMainTabIcons(TabLayout mainTabLayout) {
-    /*    mainTabLayout.getTabAt(0).setIcon(R.drawable.ic_tab_send);
+      /* mainTabLayout.getTabAt(0).setIcon(R.drawable.ic_tab_send);
         mainTabLayout.getTabAt(1).setIcon(R.drawable.ic_tab_buy);
         mainTabLayout.getTabAt(2).setIcon(R.drawable.ic_tab_swap);
         mainTabLayout.getTabAt(3).setIcon(R.drawable.ic_tab_withdraw);
-    */
+*/
         for (int i = 0; i < mainTabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = mainTabLayout.getTabAt(i);
             switch(i){
                 case 0: if (tab != null){
-                    tab.setIcon(R.drawable.ic_tab_send).setText(R.string.send_label_tab);
-                            ;
+                    tab.setIcon(R.drawable.ic_tab_send);;
                 }break;
                 case 1: if (tab != null){
-                    tab.setIcon(R.drawable.ic_tab_buy).setText(R.string.buy_label_tab);
+                    tab.setIcon(R.drawable.ic_tab_buy);
                             ;
                 }break;
                 case 2: if (tab != null){
-                    tab.setIcon(R.drawable.ic_tab_swap).setText(R.string.swap_label_tab)
-                            ;
+                    tab.setIcon(R.drawable.ic_tab_swap);
                 }break;
                 case 3: if (tab != null){
                     tab.setIcon(R.drawable.ic_tab_withdraw);

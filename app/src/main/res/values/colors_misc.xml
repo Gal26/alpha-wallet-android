@@ -14,6 +14,7 @@
     <color name="button_primary_disabled">@color/mike</color>
     <color name="surface_faded">@color/translucent_light</color>
     <color name="dark_blue">#001735</color>
+    <color name="gray_tab">#777777</color>
 
     <!-- Network Palette  -->
     <color name="mainnet">#2986AF</color>
