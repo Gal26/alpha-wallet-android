@@ -73,6 +73,8 @@ import com.alphawallet.app.widget.UserAvatar;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
+import org.web3j.abi.datatypes.Int;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -886,15 +888,15 @@ public class WalletFragment extends BaseFragment implements
     private void initMainTabLayout(View view)
     {
         TabLayout mainTabLayout = view.findViewById(R.id.main_tab_layout);
+
+
         if (CustomViewSettings.hideTabBar())
         {
             mainTabLayout.setVisibility(View.GONE);
             return;
         }
-        mainTabLayout.addTab(mainTabLayout.newTab().setText(R.string.send_label_tab));
-        mainTabLayout.addTab(mainTabLayout.newTab().setText(R.string.buy_label_tab));
-        mainTabLayout.addTab(mainTabLayout.newTab().setText(R.string.swap_label_tab));
-        mainTabLayout.addTab(mainTabLayout.newTab().setText(R.string.withdraw_label_tab));
+
+
         setupMainTabIcons(mainTabLayout);
 
         mainTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
@@ -938,16 +940,37 @@ public class WalletFragment extends BaseFragment implements
     }
 
     public void setupMainTabIcons(TabLayout mainTabLayout) {
-      /* mainTabLayout.getTabAt(0).setIcon(R.drawable.ic_tab_send);
+
+        int[] mainTabText = {
+                R.string.send_label_tab,
+                R.string.buy_label_tab,
+                R.string.swap_label_tab,
+                R.string.withdraw_label_tab};
+
+
+         int[] mainTabIcons = {
+                R.drawable.ic_tab_send,
+                R.drawable.ic_tab_buy,
+                R.drawable.ic_tab_swap,
+                R.drawable.ic_tab_withdraw
+        };
+        for (int i = 0; i < 4; i++) {
+            mainTabLayout.addTab(mainTabLayout.newTab());
+            mainTabLayout.getTabAt(i).setCustomView(R.layout.main_tab_custom_view);
+            mainTabLayout.getTabAt(i).setIcon(mainTabIcons[i]).setText(mainTabText[i]);
+        }
+
+
+        /*mainTabLayout.getTabAt(0).setIcon(R.drawable.ic_tab_send);
         mainTabLayout.getTabAt(1).setIcon(R.drawable.ic_tab_buy);
         mainTabLayout.getTabAt(2).setIcon(R.drawable.ic_tab_swap);
-        mainTabLayout.getTabAt(3).setIcon(R.drawable.ic_tab_withdraw);
-*/
-        for (int i = 0; i < mainTabLayout.getTabCount(); i++) {
+        mainTabLayout.getTabAt(3).setIcon(R.drawable.ic_tab_withdraw);*/
+
+       /* for (int i = 0; i < mainTabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = mainTabLayout.getTabAt(i);
             switch(i){
                 case 0: if (tab != null){
-                    tab.setIcon(R.drawable.ic_tab_send);;
+                    tab.setIcon(R.drawable.ic_tab_send);
                 }break;
                 case 1: if (tab != null){
                     tab.setIcon(R.drawable.ic_tab_buy);
@@ -962,7 +985,7 @@ public class WalletFragment extends BaseFragment implements
                 }break;
             }
             if (tab != null) tab.setCustomView(R.layout.main_tab_custom_view);
-        }
+        }*/
     }
 
 }

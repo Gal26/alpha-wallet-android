@@ -54,6 +54,7 @@
         <item name="tabIndicatorFullWidth">true</item>
     </style>
 
+
     <style name="Aw.Component.TabLayout.Fixed">
         <item name="android:layout_marginStart">10dp</item>
         <item name="android:layout_marginEnd">10dp</item>

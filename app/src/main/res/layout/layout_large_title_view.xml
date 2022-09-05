@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:gravity="center"
-        android:textColor="@color/regular_white"
-        android:text="@string/balance_label" />
+        android:text="@string/balance_label"
+        android:textColor="@color/regular_white" />
 
     <TextView
         android:id="@+id/title"
@@ -25,9 +25,9 @@
         android:layout_gravity="right"
         android:gravity="center"
         android:lines="1"
-        android:textColor="@color/regular_white"
         android:text="@string/unknown_balance_without_symbol"
-        app:autoSizeTextType="uniform"
+        android:textColor="@color/regular_white"
+        android:textSize="32sp"
         tools:text="$100,000,000,000,000.00" />
 
 </LinearLayout>

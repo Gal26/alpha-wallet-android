@@ -33,15 +33,18 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/main_tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="80dp"
             android:background="@color/transparent"
             app:tabMode="fixed"
             style="@style/Aw.Component.TabLayout"
             app:tabTextColor="@color/white"
             app:tabGravity="fill"
+            app:tabInlineLabel="true"
             android:layout_marginBottom="18dp"
-             app:tabInlineLabel="true"
-            />
+            app:tabPaddingStart="10dp"
+            app:tabPaddingEnd="10dp"
+            app:tabIndicatorHeight="0dp" />
+
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
